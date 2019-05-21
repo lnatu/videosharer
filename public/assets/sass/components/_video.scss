@@ -1,0 +1,348 @@
+.video { 
+    width: 100%;
+    height: auto;
+    padding: 4rem;
+
+    &__box {
+        width: 100%;
+        height: 570px;
+
+        &-file {
+            object-fit: fill;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__heading {
+        width: 100%;
+        height: auto;
+        padding: 2rem 0;
+        border-bottom: 1px solid $color-border;
+        position: relative;
+
+        &-title {
+            &--name {
+                font-size: 2rem;
+                font-weight: 300;
+                color: $color-text;
+                margin-bottom: 1rem;
+            }
+
+            &--views {
+                font-size: 1.7rem;
+                font-weight: 300;
+                color: $color-text-light;
+                margin: 0;
+            }
+        }
+    }
+
+    &__likes {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+
+        &--link {
+            display: inline-block;
+            padding: 1rem;
+            font-size: 1.5rem;
+            color: $color-bg;
+
+            &:hover {
+                text-decoration: none;
+                color: $color-bg;
+            }
+
+            &.active {
+                color: $color-link;
+            }
+        }
+
+        &--icon {
+            width: 25px;
+            height: 25px;
+            fill: $color-fill;
+        }
+
+        &--link.active &--icon {
+            fill: $color-link;
+        }
+
+        &--text {
+            color: inherit;
+            display: inline-block;
+        }
+
+        &-box {
+            position: relative;
+        }
+
+        &-popup {
+            z-index: 100;
+            position: absolute;
+            left: 0;
+            top: -170px;
+            width: 300px;
+            height: auto;
+            background-color: $color-white;
+            border: 1px solid $color-border;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .2s;
+
+            &.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &-header {
+                padding: 2rem 2rem 0 2rem;
+
+                &--title {
+                    font-size: 2rem;
+                    font-weight: 300;
+                    color: $color-text;
+                }
+
+                &--text {
+                    margin-top: 1rem;
+                    margin-bottom: 2rem;
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    color: $color-text-light;
+                }
+            }
+
+            &-footer {
+                padding: 2rem;
+                border-top: 1px solid $color-border;
+                margin-top: 2rem;
+
+                &--link {
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: $color-link;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: $color-link;
+                    }
+                }
+            }
+        }
+    }
+
+    &__details {
+        display: flex;
+        padding: 3rem 0;
+        border-bottom: 1px solid $color-border;
+
+        &-channel {
+            flex: 0 0 7%;
+
+            &--link { 
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            &--img {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+
+        &-description {
+            flex: 0 0 73%;
+        }
+
+        &-subscribe {
+            flex: 0 0 20%;
+            position: relative;
+
+            &--btn {
+                font-size: 1.7rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                display: inline-block;
+                padding: .5rem 2rem;
+                float: right;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $color-white;
+                }
+
+                &.subscribe {
+                    color: $color-white;
+                    background-color: #CC0000;
+                }
+
+                &.subscribed {
+                    color: $color-text-light;
+                    background-color: #E5E5E5;
+                }
+
+                &.edit {
+                    color: $color-white;
+                    background-color: $color-link;
+                }
+            }
+
+            &-popup {
+                width: 400px;
+                left: 47px;
+                top: -180px;
+            }
+        }
+    }
+
+    &__description {
+        &-header {
+            &--channel {
+                font-size: 1.5rem;
+                font-weight: 500;
+                margin: 0;
+                color: $color-text;
+            }
+
+            &--date {
+                font-size: 1.3rem;
+                font-weight: 300;
+                margin: 0;
+                color: $color-text-light;
+            }
+        }
+
+        &-body {
+            margin-top: 2rem;
+
+            &--text {
+                font-size: 1.4rem;
+                font-weight: 300;
+                color: $color-text;
+                margin: 0;
+            }
+        }
+    }
+
+    &__unavailable {
+        width: 100%;
+        height: 570px;
+        position: relative;
+        background-color: $color-black;
+        &-content {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            &--icon {
+                width: 15rem;
+                height: 15rem;
+                fill: #999999;
+            }
+            &--text {
+                margin: 0;
+                margin-left: 2rem;
+                color: $color-white;
+                font-size: 3rem;
+            }
+        }
+    }
+
+    &__addComment {
+        &-count {
+            &--text {
+                font-size: 2rem;
+                font-weight: 300;
+                padding: 1rem 0;
+            }
+        }
+        &-box {
+            display: flex;
+        }
+        &-user {
+            flex: 0 0 7%;
+            &--link {
+                text-decoration: none;
+            }
+            &--img {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        &-form {
+            flex: 0 0 93%;
+            &-group {
+                position: relative;
+                &::after {
+                    content: "";
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    width: 0%;
+                    height: 2px;
+                    transition: width .2s;
+                    background-color: #11111199;
+                    position: absolute;
+                }
+                &.active::after {
+                    width: 100%;
+                }
+            }
+            &--input {
+                border: none;
+                resize: none;
+                overflow: hidden;
+                border-bottom: 1px solid #EEEEEE;
+                border-radius: 0;
+                padding: 0;
+                font-size: 1.5rem;
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 1rem 2rem rgba($color-white, .1);
+                }
+            }
+        }
+        &-control {
+            padding: 1rem 0;
+            float: right;
+            &.hide {
+                display: none;
+            }
+            &--btn {
+                display: inline-block;
+                padding: .5rem 2rem;
+                font-size: 1.5rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                &:hover {
+                    text-decoration: none;
+                }
+                &.cancel {
+                    color: $color-text;
+                }
+                &.comment {
+                    background-color: #ccc;
+                    color: $color-white;
+                }
+                &.active {
+                    background-color: #065FD4;
+                }
+            }
+        }
+    }
+}
+
+textarea.form-control {
+    height: 25px;
+}

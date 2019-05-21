@@ -1,0 +1,65 @@
+.comments {
+    margin-top: 4rem;
+    &__box {
+        display: flex;
+        margin-bottom: 4rem;
+        &-user {
+            flex: 0 0 7%;
+            &--link {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            &--img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+        &-content {
+            flex: 0 0 93%;
+            &-header {
+                &--name {
+                    display: inline-block;
+                    font-weight: 500;
+                    font-size: 1.3rem;
+                    color: $color-text;
+                    &:hover {
+                        text-decoration: none;
+                        color: $color-text;
+                    }
+                }
+                &--time {
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    color: $color-text-light;
+                }
+            }
+            &--comment {
+                font-size: 1.5rem;
+            }
+            &-actions {
+                &--link {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    &:hover {
+                        text-decoration: none;
+                        color: $color-fill;
+                    }
+                    color: $color-fill;
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                    }
+                }
+                &--icon {
+                    width: 20px;
+                    height: 20px;
+                    fill: $color-fill;
+                }
+                &--text {
+                    font-size: 1.3rem;
+                    color: $color-fill;
+                }
+            }
+        }
+    }
+}

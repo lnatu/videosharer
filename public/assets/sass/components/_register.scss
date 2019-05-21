@@ -1,0 +1,88 @@
+.register {
+    height: auto;
+    background-color: $color-bg-light;
+    &__box {
+        background-color: $color-white;
+        padding: 2rem 4rem;
+        &-header {
+            &--title {
+                margin-top: 2rem;
+            }
+            &--text {
+                font-size: 1.4rem;
+            }
+            &--img {
+                height: 40px;
+            }
+        }
+        &-body {
+            margin-top: 3rem;
+            &--group {
+                position: relative;
+                margin-bottom: 3rem;
+                border-bottom: 1px solid $color-border;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    bottom: -2px;
+                    left: 0;
+                    transition: all .2s;
+                    background-image: linear-gradient(to right, #0069d9, #036bd5, #0a6dd1, #136fcd, #1c71c9);
+                }
+                &.active::after {
+                    width: 100%;
+                }
+            }
+            &--label {
+                font-size: 1.6rem;
+                position: absolute;
+                top: 10px;
+                transition: all .2s;
+                &.active {
+                    top: -15px;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-image: linear-gradient(to right bottom, #0069d9, #036bd5, #0a6dd1, #136fcd, #1c71c9);
+                }
+            }
+            &--input {
+                border: none;
+                padding: 2rem 1.5rem;
+                font-size: 1.6rem;
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 1rem 2rem rgba($color-white, .1);
+                }
+            }
+            &--btn {
+                font-size: 1.6rem;
+                padding: 1rem 1.5rem;
+            }
+            &--link {
+                display: inline-block;
+                margin-top: 2rem;
+                font-size: 1.6rem;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            &--message {
+                color: red;
+                font-size: 1.2rem;
+                bottom: -30px;
+                position: absolute;
+            }
+        }
+    }
+}
+
+.login {
+    height: calc(100vh - 70px);
+    background-color: $color-bg-light;
+    &__box {
+        padding: 4rem;
+        margin-top: 20%;
+    }
+}

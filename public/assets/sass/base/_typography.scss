@@ -1,0 +1,27 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-text;
+}
+
+#msg-flash {
+    font-size: 2rem;
+    font-weight: 500;
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    animation: message .5s cubic-bezier(.34,.49,.21,1.52), slideUpFade 1s cubic-bezier(0,.62,.36,1.03) 3s forwards;
+}
+
+.modal-title {
+    margin: 0 auto;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.error-message {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}

@@ -1,0 +1,33 @@
+.upload {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: $color-bg-light;
+    position: relative;
+    &__box {
+        background-color: $color-white;
+        padding: 2rem;
+        &--group {
+            margin-bottom: 2rem;
+        }
+        &--title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: $color-text;
+        }
+        &--file {
+            font-size: 1.6rem;
+        }
+        &--input {
+            padding: 2rem 1rem;
+            font-size: 1.6rem;
+        }
+        &--options {
+            font-size: 1.6rem;
+            height: 40px;
+        }
+        &--btn {
+            font-size: 1.6rem;
+            padding: 1rem 2rem;
+        }
+    }
+}

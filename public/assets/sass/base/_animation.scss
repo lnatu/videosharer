@@ -1,0 +1,33 @@
+@keyframes message {
+    from {
+        transform: translateX(0);
+    }
+
+    40% {
+        transform: translateX(-100px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUpFade {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    40% {
+        transform: translateY(-100px);
+        opacity: .5;
+        visibility: visible;
+    }
+
+    to {
+        transform: translateY(-100px);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
